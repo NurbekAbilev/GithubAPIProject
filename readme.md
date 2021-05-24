@@ -1,5 +1,7 @@
 # Тестовое задание
 
+## URL : https://nurbek-test-zadanie.herokuapp.com/ 
+
 Вся логика которая использует Github API хранится в - App\Repository\GithubRepository
 
 Логика фронтенда тут - /resources/views/github_user.blade.php
