@@ -16,3 +16,13 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::get('/repos', function () {
+    $users = \Illuminate\Support\Facades\Request::instance()->get('users');
+
+    $repo = new \App\Repository\GithubRepository();
+    $res = $repo->getUsersRepos($users);
+
+    return ['repos' => $res];
+});
