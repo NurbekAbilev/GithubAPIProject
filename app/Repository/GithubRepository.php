@@ -30,6 +30,7 @@ class GithubRepository
         }
 
         $res = $this->sortRepos($res);
+        $res = array_slice($res, 0, 10);
 
         return $res;
     }
